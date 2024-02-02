@@ -24,15 +24,18 @@ export const HeroSection = () => {
                     <h2 className="text-4xl font-medium mt-2">Mateus Bertazzo</h2>
 
                     <p className="text-gray-400 my-6 text-sm sm:text-base">
-                    Sou um Desenvolvedor Web Full Stack com uma forte inclinação para o Backend, 
-                    atualmente embarcado na jornada acadêmica rumo ao Bacharelado em Engenharia de Software.
+                    Sou um Desenvolvedor de Software Web Full Stack com uma forte inclinação para o Backend, 
+                    atualmente cursando Bacharelado em Engenharia de Software.
                     </p>
 
                     <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]">
-                        {Array.from({ length: 5 }).map((_, index) => (
-                            <TechBadge name="React" />
-                        
-                        ))}
+                        <TechBadge name="Desenvolvedor de Software" />
+                        <TechBadge name="Rest API" />
+                        <TechBadge name="Git e GitHub" />
+                        <TechBadge name="Banco de Dados" />
+                        <TechBadge name="Desenvolvedor de Sistemas" />
+                        <TechBadge name="Unix e Bash" />
+                        <TechBadge name="Testes Unitários" />
                     </div>
 
                     <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
