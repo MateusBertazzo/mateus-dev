@@ -1,3 +1,4 @@
+import { TechBadge } from "@/app/components/tech-badge"
 import Image from "next/image"
 
 export const HeroSection = () => {
@@ -13,8 +14,11 @@ export const HeroSection = () => {
                     atualmente embarcado na jornada acadêmica rumo ao Bacharelado em Engenharia de Software.
                     </p>
 
-                    <div>
-                        techs
+                    <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]">
+                        {Array.from({ length: 5 }).map((_, index) => (
+                            <TechBadge name="React" />
+                        
+                        ))}
                     </div>
 
                     <div>
