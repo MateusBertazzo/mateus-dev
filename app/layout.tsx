@@ -7,6 +7,7 @@ const inter = Inter({
   subsets: ['latin'],
 })
 
+
 const plexMono = IBM_Plex_Mono({
   variable: '--font-plex-mono',
   subsets: ['latin'],
