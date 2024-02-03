@@ -1,5 +1,6 @@
 'use client'
 
+import axios from 'axios'
 import { SectionTitle } from "../section-title"
 import { Button } from "../button"
 import { HiArrowNarrowRight } from "react-icons/hi"
@@ -17,12 +18,20 @@ export const ContactForm = () => {
     
     type ContactFormData = z.infer<typeof contactFormSchema>
     
-    const { handleSubmit, register } = useForm<ContactFormData>({
+    const { handleSubmit, register, reset } = useForm<ContactFormData>({
         resolver: zodResolver(contactFormSchema)
     })
     
-    const onSubmit = (data: any) => {
-            console.log(data)
+    const onSubmit = async (data: ContactFormData) => {
+        try {
+
+            await axios.post('/api/contact', data)
+
+            reset()
+
+        } catch (error) {
+            console.error(error)
+        }
     }
 
     return (
