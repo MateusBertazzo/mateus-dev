@@ -39,7 +39,10 @@ export const ContactForm = () => {
     }
 
     return (
-        <section className="py-16 px-6 md:py32 flex items-center justify-center bg-gray950">
+        <section 
+            className="py-16 px-6 md:py32 flex items-center justify-center bg-gray950"
+            id="contact"
+        >
             <div className="w-full max-w-[420px] mx-auto">
                 <SectionTitle 
                     subtitle="Contato" 
@@ -73,6 +76,7 @@ export const ContactForm = () => {
                     <Button 
                         className=" w-max mx-auto mt-6 shadow-button"
                         disabled={isSubmitting}
+
                     >
                         Enviar mensagem
                         <HiArrowNarrowRight size={18} />
